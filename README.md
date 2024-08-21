@@ -1,5 +1,5 @@
 # img2cons
-Visualizes images insice of the terminal.
+Visualizes images insice of the terminal, highly inspired (and still much worse) from [Tsoding's img2term] (https://github.com/tsoding/img2term)
 ## How to use
 ### Compiling
 Simply use your favorite c-compiler to compile ```img2cons.c```, e.g.:
