@@ -290,9 +290,12 @@ int get_distance(int index, int r, int g, int b){
 int get_print_color_index(int r, int g, int b)
 {
     int index = 0;
+    int d_min = get_distance(0, r, g, b);
     for (int i=0; i<256; ++i){
-        if (get_distance(i, r, g, b) < get_distance(index, r, g, b)){
+        int d = get_distance(i, r, g, b);
+        if (d < d_min){
             index = i;
+            d_min = d;
         }
     }
     return index;
@@ -342,7 +345,7 @@ int main(int argc, char** argv)
 
         int res_height = res_width*height/width;
 
-        uint32_t* res_pixels = (uint32_t*) calloc(res_width*res_height, sizeof(uint32_t));
+        uint32_t* res_pixels = (uint32_t*) calloc(res_width*res_height, sizeof(*res_pixels));
         assert(res_pixels != NULL && "Out of memory!");
 
         stbir_resize_uint8_srgb( (unsigned char *) pixels, width, height, sizeof(*pixels) * width,
