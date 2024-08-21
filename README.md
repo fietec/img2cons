@@ -17,8 +17,11 @@ Simply use your favorite c-compiler to compile ```img2cons.c```, e.g.:
 ```
 ## Enable color printing on windows
 Color printing using escape codes is often disabled by default.
-To enable either run the ```win_enable.bat``` file, which runs:
+To enable either run the ```win_enable.bat``` file, or directly in the terminal:
 ```
   reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f
 ```
-To remove, run ```win_disable.bat```.
+To remove, run ```win_disable.bat```, or directly in the terminal:
+```
+  reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000000 /f
+```
