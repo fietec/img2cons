@@ -1,6 +1,12 @@
 # img2cons
 Visualizes images insice of the terminal.
 ## How to use
+### Compiling
+Simply use your favorite c-compiler to compile ```img2cons.c```, e.g.:
+```
+  gcc -o img2cons img2cons.c
+```
+### Running 
 ```
   // display multiple images
   img2cons <file1> <file2> ...
