@@ -11,7 +11,7 @@ Visualizes images insice of the terminal.
 ```
 ## Enable color printing on windows
 Color printing using escape codes is often disabled by default.
-To enable either run the '''win_enable.bat''' file, which runs:
+To enable either run the ```win_enable.bat``` file, which runs:
 ```
   reg add HKEY_CURRENT_USER\Console /v VirtualTerminalLevel /t REG_DWORD /d 0x00000001 /f
 ```
